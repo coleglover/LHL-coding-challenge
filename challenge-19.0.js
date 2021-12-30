@@ -13,7 +13,7 @@ const organizeData = (listOfReceivedData) => {
   const groupData = {};
 
   listOfReceivedData.forEach(i => {    
-    groupData[i.type] = (groupData[i.type] || [i.data])
+    groupData[i.type] = (groupData[i.type] || [])
   })
   console.log(groupData)
 }
