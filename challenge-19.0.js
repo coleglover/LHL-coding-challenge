@@ -17,10 +17,6 @@ const organizeData = (listOfReceivedData) => {
     groupData[i.type].push(i.data)
   })
   console.log(groupData)
-
-  for (i in groupData) {
-    console.log(`Type: "${i}":  ${[groupData[i]]}`)
-  }
 }
 
 organizeData(listOfReceivedData);
