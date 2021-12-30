@@ -12,8 +12,11 @@ const organizeData = (listOfReceivedData) => {
   const groupData = {};
 
   listOfReceivedData.forEach((i) => {
-    groupData[i.type] = groupData[i.type] || [];
+    groupData[i.type] = groupData[i.type] || []; 
     groupData[i.type].push(i.data);
+
+    // if the Object keys are not equal, create a new key-value array based on the new type
+    // add the corresponding value data to that array  
   });
 
   return groupData;
