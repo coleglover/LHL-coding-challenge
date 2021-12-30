@@ -13,9 +13,14 @@ const organizeData = (listOfReceivedData) => {
   const groupData = {};
 
   listOfReceivedData.forEach(i => {    
-    groupData[i.type] = (groupData[i.type] || [])
+    groupData[i.type] = (groupData[i.type] || []);
+    groupData[i.type].push(i.data)
   })
   console.log(groupData)
+
+  for (i in groupData) {
+    console.log(`Type: "${i}":  ${[groupData[i]]}`)
+  }
 }
 
-console.log(organizeData(listOfReceivedData));
+organizeData(listOfReceivedData);
