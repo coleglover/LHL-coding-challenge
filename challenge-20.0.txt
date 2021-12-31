@@ -5,3 +5,20 @@ difference between:
 let { objectProperty } = object1
 
 let newObject = {...object1}
+
+
+Challange 21:
+Questions: 
+
+1) difference between:
+
+const parseExchanges = (exchanges) => {
+  return exchanges.map((x) => {
+    return `${x.origin} ${x.message}`;
+  });
+
+
+  // return exchanges.map((x) => {
+  //   `${x.origin}: ${x.message}`
+  //   //console.log(`${x.origin}: ${x.message}`)
+  // });

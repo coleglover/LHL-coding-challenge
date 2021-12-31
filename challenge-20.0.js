@@ -57,7 +57,6 @@ const parseMissionData = (missionData) => {
   for (key in missionData) {
     newMissionData[key] = missionData[key].length;
   }
-
   return newMissionData;
 };
 

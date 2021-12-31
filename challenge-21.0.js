@@ -11,23 +11,16 @@ const missionData = {
 };
 
 const parseMissionSummary = (exchanges, missionData) => {
-  const missionSummary = {};
-
-  const transcript = parseExchanges(exchanges);
-
-  console.log(transcript);
+  return (missionSummary = {
+    transcript: parseExchanges(exchanges),
+    missionData: missionData,
+  });
 };
 
 const parseExchanges = (exchanges) => {
   return exchanges.map((x) => {
-    return `${x.origin} ${x.message}`;
+    return `${x.origin}: ${x.message}`;
   });
-  return transcript;
-
-  // return exchanges.map((x) => {
-  //   `${x.origin}: ${x.message}`
-  //   //console.log(`${x.origin}: ${x.message}`)
-  // });
 };
 
 parseMissionSummary(exchanges, missionData);
