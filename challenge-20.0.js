@@ -17,6 +17,7 @@ const checks = {
 
 const confirmReentryPlans = (speed, missionData, checks) => {
   console.log(`running shuttle re-entry checklist...\n`);
+
   if (speedCheck(speed, checks) && dataCheck(missionData, checks)) {
     console.log(`\nAll tests passed! Begin re-entry sequence.`);
     return true;
@@ -29,10 +30,10 @@ const speedCheck = (actualSpeed, checks) => {
   const { maxSpeed, minSpeed } = checks;
 
   if (minSpeed < actualSpeed && actualSpeed < maxSpeed) {
-    console.log(`- speed test: success`)
+    console.log(`- speed test: success`);
     return true;
   }
-  console.log(`- speed test: fail`)
+  console.log(`- speed test: fail`);
   return false;
 };
 
@@ -42,11 +43,11 @@ const dataCheck = (missionData, checks) => {
 
   for (key in parsedMissionData) {
     if (parsedMissionData[key] != dataEntries[key]) {
-      console.log(`- data entry test: fail`)
+      console.log(`- data entry test: fail`);
       return false;
     }
   }
-  console.log(`- data entry test: success`)
+  console.log(`- data entry test: success`);
   return true;
 };
 

@@ -1,1 +1,7 @@
 how can I parse the missionData object on just one line?
+
+difference between:
+
+let { objectProperty } = object1
+
+let newObject = {...object1}
